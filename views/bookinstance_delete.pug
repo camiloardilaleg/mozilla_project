@@ -1,0 +1,16 @@
+//- el layout que va a utilizar 
+extends layout
+
+//- el contenido que va a reemplazar. Es decir, la posición en el LAYOUT
+block content
+
+    h1 BookInstance: !{Title}
+
+    p Do you really want to delete this book Instance?
+
+    form(method='POST', action='')
+        div(class='form-group')
+            input(type="hidden", class='form-control', id='authorid', name='authorid',
+            required='true', value=bookinstance._id)
+        button.btn.btn-primary(type='submit') Delete
+    
